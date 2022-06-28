@@ -1,13 +1,13 @@
 //parallex effect
-let stars = document.getElementById("stars");
-let moon = document.getElementById("moon");
-let mountb = document.getElementById("mountb");
-let txt = document.getElementById("intro");
-let mountf = document.getElementById("mountf");
-let header = document.querySelector("header");
+var stars = document.getElementById("stars");
+var moon = document.getElementById("moon");
+var mountb = document.getElementById("mountb");
+var txt = document.getElementById("intro");
+var mountf = document.getElementById("mountf");
+var header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
-  let i = window.scrollY;
+  var i = window.scrollY;
   stars.style.left = -i * 7 + "px";
   moon.style.top = -i * 1.05 + "px";
   mountb.style.top = i * 0.5 + "px";

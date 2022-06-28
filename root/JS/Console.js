@@ -2,7 +2,7 @@
 var direction = 1;
 var i = 0;
 var textarea = $(".term");
-var text = "ping life";
+var text = "Internship presentation";
 var choiceIndex = Math.floor(Math.random() * text.length);
 
 // NOTE:
@@ -20,7 +20,7 @@ function count() {
       // buffer for start
       time = setInterval(count, 1000);
     } else {
-      time = setInterval(count, Math.floor(Math.random() * 1000) + 50);
+      time = setInterval(count, Math.floor(Math.random() * 750) + 50);
     }
   } else {
     // direction is -1 if counting down

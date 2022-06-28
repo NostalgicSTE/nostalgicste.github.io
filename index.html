@@ -51,8 +51,8 @@
     </header>
     <section class="top" id="homesrc">
         <div id="clock">
-            <p class="date">{{ date }}</p>
-            <p class="time">{{ time }}</p>
+            <p class="date" id="date">{{ date }}</p>
+            <p class="time" id="time">{{ time }}</p>
         </div>
         <img src="./Multimedia/starsEx.webp" id="stars" alt="Spread out white star like figures to create ambience">
         <img src="./Multimedia/moon_1.webp" id="moon" alt="Moon is quite of the hallmark of the parallax design">
@@ -73,9 +73,9 @@
                         account_circle
                     </span></a>
             </li>
-            <li class="education">
-                <a href="#education" class="items"><span id="03" class="material-symbols-rounded">
-                        school
+            <li class="timeline">
+                <a href="#timeline" class="items"><span id="03" class="material-symbols-rounded">
+                        timeline
                     </span></a>
             </li>
             <li class="skills">
@@ -147,105 +147,88 @@
             </div>
         </div>
     </section>
-    <section id="education">
+    <section id="timeline">
         <div id="particles-js1">
             <div class="content">
                 <h2>
-                    Educational Journey
+                    Internship Progress
                 </h2>
-                <div class="block edu" style="overflow: auto; pointer-events: auto; display: block;">
-                    <div style="height: 100%; width: 100%;">
-                        <h3>
-                            Scroll down to explore
-                        </h3>
+                <div class="block" style="overflow: auto; pointer-events: auto; display: block;">
+                    <div class="timeline">
+                        <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+                            <div class="timeline__event__icon ">
+                                <div class="timeline__event__date">
+                                    07 Mar - 14 Mar
+                                </div>
+                            </div>
+                            <div class="timeline__event__content ">
+                                <div class="timeline__event__title">
+                                    Inception
+                                </div>
+                                <div class="timeline__event__description">
+                                    <p>HyperVisor introduction, along with experimentation of server services, including
+                                        but not limited to SMTP, NTP and Active Directory (AD); Getting to know the work
+                                        environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+                            <div class="timeline__event__icon">
+                                <i class="lni-burger"></i>
+                                <div class="timeline__event__date">
+                                    15 Mar - 30 Mar
+                                </div>
+                            </div>
+                            <div class="timeline__event__content">
+                                <div class="timeline__event__title">
+                                    Continuation
+                                </div>
+                                <div class="timeline__event__description">
+                                    <p>Atlassian familiarization, AD user addition and documentation, following which
+                                        was Bitbucket projects migration; studied networking (compTIA Network+), for
+                                        future use.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+                            <div class="timeline__event__icon">
+                                <i class="lni-slim"></i>
+                                <div class="timeline__event__date">
+                                    31 Mar - 19 Apr
+                                </div>
+                            </div>
+                            <div class="timeline__event__content">
+                                <div class="timeline__event__title">
+                                    Execution
+                                </div>
+                                <div class="timeline__event__description">
+                                    <p>Exploring Jira and Linux environment, successful migration of Jira projects and
+                                        related services, and clean-up of pending requests from all 3 Atlassian services
+                                        (Jira, Bitbucket and Confluence).</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeline__event animated fadeInUp timeline__event--type1">
+                            <div class="timeline__event__icon">
+                                <i class="lni-cake"></i>
+                                <div class="timeline__event__date">
+                                    20 Apr - 13 May
+                                </div>
+                            </div>
+                            <div class="timeline__event__content">
+                                <div class="timeline__event__title">
+                                    Execution<span>++</span>
+                                </div>
+                                <div class="timeline__event__description">
+                                    <p>QA Jira Migration and Network+ were the main activities we were involved in, with
+                                        familiarization of Dell server commands in preparation of server configuration
+                                        at Amo Kio (AMK) branch.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <figure>
-                        <img src='./Multimedia/pril.webp' alt="Primary school logo" />
-                    </figure>
-
-                    <section>
-                        <div>
-                            <h3>West Grove Primary School</h3>
-                            <p>Year 2011 - Year 2016<br />Creativity is the key to success in the future, and primary
-                                education is where teachers
-                                can bring creativity in children at that level. <br />
-                                ~ APJ Abdul Kalam
-                            </p>
-                        </div>
-                    </section>
-
-                    <figure>
-                        <img src='./Multimedia/pri.webp' alt="Primary school pics collage" />
-                    </figure>
-
-                    <section>
-                        <div>
-                            <h3><a href='https://westgrovepri.moe.edu.sg/'>Explore more</a></h3>
-                            <p>Primary school was one of the longest educational journey in my life, totalling to 6
-                                years, it is students' first exposure to actual studies. Undeniably, it was also the
-                                start of the rigorous "marathon", survival of the fittest. My educational endeavours
-                                started here.</p>
-                        </div>
-                    </section>
-
-
-
-                    <figure>
-                        <img src='./Multimedia/secl.webp' alt="Secondary school logo" />
-                    </figure>
-                    <section>
-                        <div>
-                            <h3>Yuan Ching Secondary School</h3>
-                            <p>Year 2017 - Year 2020<br />Education is not the learning of many facts, but the training
-                                of the mind to think.
-                                <br />
-                                ~ Albert Einstein
-                            </p>
-                        </div>
-                    </section>
-
-                    <figure>
-                        <img src='./Multimedia/sec.webp' alt="Secondary school pics collage" />
-                    </figure>
-                    <section>
-                        <div>
-                            <h3><a href='https://yuanchingsec.moe.edu.sg/'>Explore more</a>
-                            </h3>
-                            <p>Secondary school was one of the memorable years I had had, thanks to the maturity it gave
-                                me for life. These 4 years was also when I had explored my emotions, from anger to
-                                affection, happiness to hopelessness. Overall, it was a well-rounded life section.</p>
-                        </div>
-                    </section>
-
-                    <figure>
-                        <img src='./Multimedia/polyl.webp' alt="poly logo" />
-                    </figure>
-                    <section>
-                        <div>
-                            <h3>Ngee Ann Polytechnic</h3>
-                            <p>Year 2021 - Year 2023<br />Science can amuse and fascinate us all, but it is engineering
-                                that changes the world.
-                                <br /> ~ Isaac Asimov
-                            </p>
-                        </div>
-                    </section>
-
-                    <figure>
-                        <img src='./Multimedia/poly.webp' alt="poly pics collage" />
-                    </figure>
-                    <section>
-                        <div>
-                            <h3><a href='https://www.np.edu.sg/soe/Pages/es.aspx'>Explore
-                                    more</a>
-                            </h3>
-                            <p>Polytechnic life. It is definitely a noteworthy experience to get. From the structured
-                                system from the past decade, to an unstructured, competitive environment, has really
-                                taught me one thing: Life never fails to surprise me every single time. This environment
-                                and way of learning is close to reality and has batter shaped me to be better person,
-                                worker.</p>
-                        </div>
-                    </section>
                 </div>
             </div>
         </div>
@@ -568,17 +551,17 @@
         })();
     </script>
     <script src="./root/Particles/particles.js"></script>
-    <script src="./root/Particles/app.js"></script>
+    <script async src="./root/Particles/app.js"></script>
     <script src="./root/Particles/particles1.js"></script>
-    <script src="./root/Particles/app1.js"></script>
+    <script async src="./root/Particles/app1.js"></script>
     <script src="./root/Particles/particles2.js"></script>
-    <script src="./root/Particles/app2.js"></script>
+    <script async src="./root/Particles/app2.js"></script>
     <!-- <script src="./root/Particles/particles3.js"></script>
-    <script src="./root/Particles/app3.js"></script> -->
+        <script src="./root/Particles/app3.js"></script> -->
     <script src="./root/Particles/particles4.js"></script>
-    <script src="./root/Particles/app4.js"></script>
+    <script async src="./root/Particles/app4.js"></script>
     <script src="./root/Particles/particles5.js"></script>
-    <script src="./root/Particles/app5.js"></script>
+    <script async src="./root/Particles/app5.js"></script>
     <script src="https://kit.fontawesome.com/905e574296.js" crossorigin="anonymous"></script>
     <script src="./root/JS/Splash.js"></script>
     <script src="./root/JS/Parallex.js"></script>
