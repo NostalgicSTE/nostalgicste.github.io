@@ -461,7 +461,7 @@ body {
             }
 
             .menu {
-                background: rgba(255, 255, 255, 0.08);
+                background: #00000080;
                 backdrop-filter: blur(5px);
                 z-index: 100000;
                 border-radius: 2em;
@@ -885,16 +885,36 @@ body {
 
                     div>p {
                         margin: auto;
+                        line-height: 2.1em;
                     }
 
                     div>p:first-child {
                         padding-top: 1em;
+                        padding-bottom: 1em;
                     }
                 }
 
 
                 .splide__slide img {
-                    vertical-align: bottom
+                    width: 50%;
+                    border-radius: 1em;
+                    height: auto;
+                    top: 10%;
+                    left: 25%;
+                }
+
+                .splide__slide>div>img {
+                    width: 75%;
+                    height: auto;
+                    top: 41%;
+                    left: 12.5%;
+                }
+
+                .splide__slide>.only>img {
+                    width: 60%;
+                    top: 10%;
+                    height: 80%;
+                    left: 20%;
                 }
 
                 .splide__slide svg {
@@ -1097,7 +1117,7 @@ body {
 
                 .splide__slide {
                     -webkit-tap-highlight-color: transparent;
-                    width: 33.3333333333333333333333333333333333333333333333333333333%;
+                    width: 50%;
 
                     @media screen and (max-width: 930px) {
                         width: 100%;
@@ -1223,6 +1243,27 @@ body {
 
                 // Timeline
 
+                .rainbow_text_animated {
+                    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent !important;
+                    animation: rainbow_animation 2s ease-in-out infinite;
+                    background-size: 400% 100%;
+                }
+
+                @keyframes rainbow_animation {
+
+                    0%,
+                    100% {
+                        background-position: 0 0;
+                    }
+
+                    50% {
+                        background-position: 100% 0;
+                    }
+                }
+
                 .timeline {
                     display: flex;
                     flex-direction: column;
@@ -1252,13 +1293,11 @@ body {
                             letter-spacing: 1.5px;
 
                             span {
-                                display: table-cell;
-                                vertical-align: middle; // line-height: 1.4;
-                                font-size: 0.8vmax;
+                                position: relative;
+                                top: -0.1vh;
+                                font-size: 1vmax;
                                 text-transform: none;
-
                                 font-weight: 600;
-                                color: #9251ac;
                             }
                         }
 
@@ -1361,21 +1400,22 @@ body {
                     margin-top: 100px;
                     padding-top: 150px;
                     padding-bottom: 0%;
-                    position: relative;
+                    position: static;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     max-width: 100%;
                     height: 75vh;
                     margin: 0 auto;
-                    position: sticky;
+                    // position: sticky;
                     // backdrop-filter: blur(10px);
                     padding: 40px;
                     border-radius: 1em;
                 }
 
                 .card {
-                    top: 30px;
+                    height: auto;
+                    // top: 30px;
                     position: sticky;
                     border: 1px solid white;
                     box-shadow: 0 0 20px 0px white;
@@ -1384,7 +1424,7 @@ body {
                     color: #ffffff;
                     padding: 40px;
                     border-radius: 1em;
-                    margin-bottom: 20px;
+                    margin-bottom: 50px;
                     transition: ease-in-out 0.4s;
 
                     &:hover {
@@ -1392,29 +1432,33 @@ body {
                         color: black;
                         background-color: #577ca7;
                         transition: ease-in-out 0.4s;
-
-                        span {
-                            color: #FFEDBC;
-                        }
                     }
 
                     h2 {
                         font-size: 2vmax;
-                        padding: 0;
+                        padding-bottom: 3vh;
                     }
 
-                    span {
-                        display: block;
-                        font-size: 14px;
-                        color: #ED4264;
+                    p{
+                        line-height: 4vh;
+                    }
+
+                    img.card-img {
+                        position: static !important;
+                        width: 55%;
+                        border-radius: 1em;
+
+                        @media screen and (max-width: 500px) {
+                            width: 80%;
+                        }
                     }
                 }
 
-                @for $i from 1 through 100 {
-                    .card:nth-child(#{$i}n) {
-                        top: $i * 20px;
-                    }
-                }
+                // @for $i from 1 through 100 {
+                //     .card:nth-child(#{$i}n) {
+                //         top: $i * 20px;
+                //     }
+                // }
 
                 //
 

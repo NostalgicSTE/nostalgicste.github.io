@@ -1,4 +1,4 @@
-//Carousel
+/* The JavaScript code that is needed to make the slider work. */
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide(".splide", {
     type: "loop",

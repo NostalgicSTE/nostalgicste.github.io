@@ -521,7 +521,7 @@ body section.top #clock .date {
   }
 }
 body section.top .menu {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.5019607843);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   z-index: 100000;
@@ -935,12 +935,30 @@ body section .content .block .splide__slide {
 }
 body section .content .block .splide__slide div > p {
   margin: auto;
+  line-height: 2.1em;
 }
 body section .content .block .splide__slide div > p:first-child {
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 body section .content .block .splide__slide img {
-  vertical-align: bottom;
+  width: 50%;
+  border-radius: 1em;
+  height: auto;
+  top: 10%;
+  left: 25%;
+}
+body section .content .block .splide__slide > div > img {
+  width: 75%;
+  height: auto;
+  top: 41%;
+  left: 12.5%;
+}
+body section .content .block .splide__slide > .only > img {
+  width: 60%;
+  top: 10%;
+  height: 80%;
+  left: 20%;
 }
 body section .content .block .splide__slide svg {
   vertical-align: bottom;
@@ -1135,7 +1153,7 @@ body section .content .block .splide__progress__bar {
 }
 body section .content .block .splide__slide {
   -webkit-tap-highlight-color: transparent;
-  width: 33.3333333333%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1250,6 +1268,32 @@ body section .content .block .splide__pagination--ttb {
   right: 0.5em;
   top: 0;
 }
+body section .content .block .rainbow_text_animated {
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff), color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-animation: rainbow_animation 2s ease-in-out infinite;
+          animation: rainbow_animation 2s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+@-webkit-keyframes rainbow_animation {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+@keyframes rainbow_animation {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
 body section .content .block .timeline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1287,12 +1331,11 @@ body section .content .block .timeline__event__title {
   letter-spacing: 1.5px;
 }
 body section .content .block .timeline__event__title span {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 0.8vmax;
+  position: relative;
+  top: -0.1vh;
+  font-size: 1vmax;
   text-transform: none;
   font-weight: 600;
-  color: #9251ac;
 }
 body section .content .block .timeline__event__content {
   padding: 3vh;
@@ -1377,7 +1420,7 @@ body section .content .block .cardl {
   margin-top: 100px;
   padding-top: 150px;
   padding-bottom: 0%;
-  position: relative;
+  position: static;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1390,12 +1433,11 @@ body section .content .block .cardl {
   max-width: 100%;
   height: 75vh;
   margin: 0 auto;
-  position: sticky;
   padding: 40px;
   border-radius: 1em;
 }
 body section .content .block .card {
-  top: 30px;
+  height: auto;
   position: sticky;
   border: 1px solid white;
   -webkit-box-shadow: 0 0 20px 0px white;
@@ -1406,7 +1448,7 @@ body section .content .block .card {
   color: #ffffff;
   padding: 40px;
   border-radius: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
 }
@@ -1418,317 +1460,22 @@ body section .content .block .card:hover {
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
 }
-body section .content .block .card:hover span {
-  color: #FFEDBC;
-}
 body section .content .block .card h2 {
   font-size: 2vmax;
-  padding: 0;
-}
-body section .content .block .card span {
-  display: block;
-  font-size: 14px;
-  color: #ED4264;
-}
-body section .content .block .card:nth-child(1n) {
-  top: 20px;
-}
-body section .content .block .card:nth-child(2n) {
-  top: 40px;
-}
-body section .content .block .card:nth-child(3n) {
-  top: 60px;
-}
-body section .content .block .card:nth-child(4n) {
-  top: 80px;
-}
-body section .content .block .card:nth-child(5n) {
-  top: 100px;
-}
-body section .content .block .card:nth-child(6n) {
-  top: 120px;
-}
-body section .content .block .card:nth-child(7n) {
-  top: 140px;
-}
-body section .content .block .card:nth-child(8n) {
-  top: 160px;
-}
-body section .content .block .card:nth-child(9n) {
-  top: 180px;
-}
-body section .content .block .card:nth-child(10n) {
-  top: 200px;
-}
-body section .content .block .card:nth-child(11n) {
-  top: 220px;
-}
-body section .content .block .card:nth-child(12n) {
-  top: 240px;
-}
-body section .content .block .card:nth-child(13n) {
-  top: 260px;
-}
-body section .content .block .card:nth-child(14n) {
-  top: 280px;
-}
-body section .content .block .card:nth-child(15n) {
-  top: 300px;
-}
-body section .content .block .card:nth-child(16n) {
-  top: 320px;
-}
-body section .content .block .card:nth-child(17n) {
-  top: 340px;
-}
-body section .content .block .card:nth-child(18n) {
-  top: 360px;
-}
-body section .content .block .card:nth-child(19n) {
-  top: 380px;
-}
-body section .content .block .card:nth-child(20n) {
-  top: 400px;
-}
-body section .content .block .card:nth-child(21n) {
-  top: 420px;
-}
-body section .content .block .card:nth-child(22n) {
-  top: 440px;
-}
-body section .content .block .card:nth-child(23n) {
-  top: 460px;
-}
-body section .content .block .card:nth-child(24n) {
-  top: 480px;
-}
-body section .content .block .card:nth-child(25n) {
-  top: 500px;
-}
-body section .content .block .card:nth-child(26n) {
-  top: 520px;
-}
-body section .content .block .card:nth-child(27n) {
-  top: 540px;
-}
-body section .content .block .card:nth-child(28n) {
-  top: 560px;
-}
-body section .content .block .card:nth-child(29n) {
-  top: 580px;
-}
-body section .content .block .card:nth-child(30n) {
-  top: 600px;
-}
-body section .content .block .card:nth-child(31n) {
-  top: 620px;
-}
-body section .content .block .card:nth-child(32n) {
-  top: 640px;
-}
-body section .content .block .card:nth-child(33n) {
-  top: 660px;
-}
-body section .content .block .card:nth-child(34n) {
-  top: 680px;
-}
-body section .content .block .card:nth-child(35n) {
-  top: 700px;
-}
-body section .content .block .card:nth-child(36n) {
-  top: 720px;
-}
-body section .content .block .card:nth-child(37n) {
-  top: 740px;
-}
-body section .content .block .card:nth-child(38n) {
-  top: 760px;
-}
-body section .content .block .card:nth-child(39n) {
-  top: 780px;
-}
-body section .content .block .card:nth-child(40n) {
-  top: 800px;
-}
-body section .content .block .card:nth-child(41n) {
-  top: 820px;
-}
-body section .content .block .card:nth-child(42n) {
-  top: 840px;
-}
-body section .content .block .card:nth-child(43n) {
-  top: 860px;
-}
-body section .content .block .card:nth-child(44n) {
-  top: 880px;
-}
-body section .content .block .card:nth-child(45n) {
-  top: 900px;
-}
-body section .content .block .card:nth-child(46n) {
-  top: 920px;
-}
-body section .content .block .card:nth-child(47n) {
-  top: 940px;
-}
-body section .content .block .card:nth-child(48n) {
-  top: 960px;
-}
-body section .content .block .card:nth-child(49n) {
-  top: 980px;
-}
-body section .content .block .card:nth-child(50n) {
-  top: 1000px;
-}
-body section .content .block .card:nth-child(51n) {
-  top: 1020px;
-}
-body section .content .block .card:nth-child(52n) {
-  top: 1040px;
-}
-body section .content .block .card:nth-child(53n) {
-  top: 1060px;
-}
-body section .content .block .card:nth-child(54n) {
-  top: 1080px;
-}
-body section .content .block .card:nth-child(55n) {
-  top: 1100px;
-}
-body section .content .block .card:nth-child(56n) {
-  top: 1120px;
-}
-body section .content .block .card:nth-child(57n) {
-  top: 1140px;
-}
-body section .content .block .card:nth-child(58n) {
-  top: 1160px;
-}
-body section .content .block .card:nth-child(59n) {
-  top: 1180px;
-}
-body section .content .block .card:nth-child(60n) {
-  top: 1200px;
-}
-body section .content .block .card:nth-child(61n) {
-  top: 1220px;
-}
-body section .content .block .card:nth-child(62n) {
-  top: 1240px;
-}
-body section .content .block .card:nth-child(63n) {
-  top: 1260px;
-}
-body section .content .block .card:nth-child(64n) {
-  top: 1280px;
-}
-body section .content .block .card:nth-child(65n) {
-  top: 1300px;
-}
-body section .content .block .card:nth-child(66n) {
-  top: 1320px;
-}
-body section .content .block .card:nth-child(67n) {
-  top: 1340px;
-}
-body section .content .block .card:nth-child(68n) {
-  top: 1360px;
-}
-body section .content .block .card:nth-child(69n) {
-  top: 1380px;
-}
-body section .content .block .card:nth-child(70n) {
-  top: 1400px;
-}
-body section .content .block .card:nth-child(71n) {
-  top: 1420px;
-}
-body section .content .block .card:nth-child(72n) {
-  top: 1440px;
-}
-body section .content .block .card:nth-child(73n) {
-  top: 1460px;
-}
-body section .content .block .card:nth-child(74n) {
-  top: 1480px;
-}
-body section .content .block .card:nth-child(75n) {
-  top: 1500px;
-}
-body section .content .block .card:nth-child(76n) {
-  top: 1520px;
-}
-body section .content .block .card:nth-child(77n) {
-  top: 1540px;
-}
-body section .content .block .card:nth-child(78n) {
-  top: 1560px;
-}
-body section .content .block .card:nth-child(79n) {
-  top: 1580px;
-}
-body section .content .block .card:nth-child(80n) {
-  top: 1600px;
-}
-body section .content .block .card:nth-child(81n) {
-  top: 1620px;
-}
-body section .content .block .card:nth-child(82n) {
-  top: 1640px;
-}
-body section .content .block .card:nth-child(83n) {
-  top: 1660px;
-}
-body section .content .block .card:nth-child(84n) {
-  top: 1680px;
-}
-body section .content .block .card:nth-child(85n) {
-  top: 1700px;
-}
-body section .content .block .card:nth-child(86n) {
-  top: 1720px;
-}
-body section .content .block .card:nth-child(87n) {
-  top: 1740px;
-}
-body section .content .block .card:nth-child(88n) {
-  top: 1760px;
-}
-body section .content .block .card:nth-child(89n) {
-  top: 1780px;
-}
-body section .content .block .card:nth-child(90n) {
-  top: 1800px;
-}
-body section .content .block .card:nth-child(91n) {
-  top: 1820px;
-}
-body section .content .block .card:nth-child(92n) {
-  top: 1840px;
-}
-body section .content .block .card:nth-child(93n) {
-  top: 1860px;
-}
-body section .content .block .card:nth-child(94n) {
-  top: 1880px;
-}
-body section .content .block .card:nth-child(95n) {
-  top: 1900px;
-}
-body section .content .block .card:nth-child(96n) {
-  top: 1920px;
-}
-body section .content .block .card:nth-child(97n) {
-  top: 1940px;
-}
-body section .content .block .card:nth-child(98n) {
-  top: 1960px;
-}
-body section .content .block .card:nth-child(99n) {
-  top: 1980px;
-}
-body section .content .block .card:nth-child(100n) {
-  top: 2000px;
+  padding-bottom: 3vh;
+}
+body section .content .block .card p {
+  line-height: 4vh;
+}
+body section .content .block .card img.card-img {
+  position: static !important;
+  width: 55%;
+  border-radius: 1em;
+}
+@media screen and (max-width: 500px) {
+  body section .content .block .card img.card-img {
+    width: 80%;
+  }
 }
 body section .content .block .row {
   display: -webkit-box;

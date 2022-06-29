@@ -1,3 +1,7 @@
+/**
+ * It's a function that takes two arguments, a number and a digit, and returns a string that is the
+ * number with the number of zeros in front of it that is equal to the digit.
+ */
 var clock = new Vue({
   el: "#clock",
   data: {

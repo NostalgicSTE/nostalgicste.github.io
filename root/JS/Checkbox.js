@@ -1,4 +1,4 @@
-//checkbox colorization
+/* The above code is disabling the buttons when the checkbox is not checked. */
 const checkbox = document.querySelector('.my-form input[type="checkbox"]');
 const reset = document.querySelector("#reset");
 const btns = document.querySelectorAll(".my-form button");

@@ -1,5 +1,4 @@
-//This is the "Offline copy of pages" wervice worker
-
+/* The above code is a service worker that is caching the index.html page. */
 //Install stage sets up the index page (home page) in the cahche and opens a new cache
 self.addEventListener("install", function (event) {
   var indexPage = new Request("index.html");

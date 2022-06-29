@@ -1,4 +1,4 @@
-//parallex effect
+/* Moving the elements on the page as the user scrolls. */
 var stars = document.getElementById("stars");
 var moon = document.getElementById("moon");
 var mountb = document.getElementById("mountb");

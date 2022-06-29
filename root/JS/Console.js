@@ -1,12 +1,13 @@
-//console
+/**
+ * If the direction is 1, then if the index is 0, set the interval to 1000, otherwise set it to a
+ * random number between 50 and 800. If the direction is -1, then if the index is the length of the
+ * string, set the interval to 1500, otherwise set it to 100.
+ */
 var direction = 1;
 var i = 0;
 var textarea = $(".term");
 var text = "Internship presentation";
 var choiceIndex = Math.floor(Math.random() * text.length);
-
-// NOTE:
-// I added the "@dev:~$ " as css:before elem, easier to write the code
 
 function count() {
   i += direction;
@@ -14,25 +15,18 @@ function count() {
   textarea.text(text.substr(0, i));
   clearInterval(time);
 
-  // direction is 1 if counting up
   if (direction === 1) {
     if (i === 0) {
-      // buffer for start
       time = setInterval(count, 1000);
     } else {
       time = setInterval(count, Math.floor(Math.random() * 750) + 50);
     }
   } else {
-    // direction is -1 if counting down
     if (i === text.length) {
       time = setInterval(count, 1500);
     } else {
-      // buffer for end
       time = setInterval(count, 100);
     }
   }
 }
-
-// inital interval
-// setTimeout doesn't work well here
 var time = setInterval(count, 1000);

@@ -1,3 +1,7 @@
+/**
+ * It takes the values of the input fields and sends them to the emailjs server
+ * @param params - {
+ */
 function sendMail(params) {
   var tempv = {
     name: document.getElementById("Name").value,

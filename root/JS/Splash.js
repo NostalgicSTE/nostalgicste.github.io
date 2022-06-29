@@ -1,3 +1,4 @@
+/* Making the fire zoom in and fade out. */
 var fire = document.getElementById("Intro");
 $("body").fadeIn(1500);
 setTimeout(function () {

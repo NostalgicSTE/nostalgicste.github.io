@@ -1,4 +1,4 @@
-//menu tracking
+/* A JavaScript code that is used to make the navbar active when the user scrolls to the section. */
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("section.top .menu li");
 
