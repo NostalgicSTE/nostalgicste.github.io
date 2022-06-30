@@ -18,6 +18,15 @@ $animationtime: 1.5s;
 $size: 200px;
 $white: #f4eed7;
 $feature : #4b9aaa;
+$text: #686868;
+$m01: #667eea;
+/* main 1*/
+$m02: #764ba2;
+/* main 2*/
+$n01: #f5f7fa;
+/* neutral 1*/
+$n02: #c3cfe2;
+/* neutral 2*/
 
 :root {
     --white: white;
@@ -378,12 +387,26 @@ body {
         }
 
         &:nth-of-type(6) {
+            background: $darkbgc;
+        }
+
+        &:nth-of-type(7) {
             background: $darkcc;
         }
 
-        // &:nth-of-type(7) {
-        //     background: $darkcc;
-        // }
+        span.rainbow_text_animated {
+            position: relative;
+            top: -0.1vh;
+            font-size: 1vmax;
+            text-transform: none;
+            font-weight: 600;
+            background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            animation: rainbow_animation 2s ease-in-out infinite;
+            background-size: 400% 100%;
+        }
 
         &.top::before {
             content: '';
@@ -512,7 +535,7 @@ body {
             &#mountf {
                 z-index: 10;
                 // animation: fmountb 15s ease-in-out infinite;
-                animation-name: fmount;
+                // animation-name: fmount;
                 animation-duration: 0.5s, 15s;
                 animation-timing-function: ease-in-out, ease-in-out;
                 animation-iteration-count: infinite, infinite;
@@ -585,229 +608,332 @@ body {
                 justify-content: center;
                 align-items: center;
 
-                // .txtd {
-                //     color: $darkft;
-                //     text-align: start;
-                //     mix-blend-mode: multiply;
-                //     border: 0px none;
-                //     height: 10%;
-                //     width: 55%;
-                //     border-radius: 1em;
-                //     background: rgba(72, 92, 129, 0.6);
-                //     box-shadow: 9px 9px 18px #323f59,
-                //         -9px -9px 18px #5e79a9;
+                //@at-root
+                #Tabby {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
 
-                //     &.large {
-                //         height: 40%;
-                //         width: 85%;
-                //     }
-                // }
+                .cox {
+                    max-width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    min-width: 260px;
+                    margin: auto;
+                    transition: 0.3s ease;
+                    max-height: 90%;
+
+                    @media screen and (max-width: 512px) {
+                        margin: 0 4%;
+                        margin-top: 5%;
+                    }
+                }
+
+                /* Tabs menu */
+
+                .tabs {
+                    margin: 0;
+                    background-image: linear-gradient(135deg, $n01 0%, $n02 100%);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 80px;
+                    border-radius: 2px 2px 0px 0px;
+
+                    @media screen and (max-width: 512px) {
+                        height: 40px;
+                    }
+                }
+
+                /* Tab Links */
+
+                .tablinks {
+                    background: transparent;
+                    background-image: linear-gradient(90deg, transparent 70%, rgba(255, 255, 255, 0.2) 100%);
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    width: 33.333333333333333333333333333333333%;
+                    /*change depending on the number of tabs*/
+                    height: 80px;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 16px;
+                    font-family: "IBM Plex Sans", sans-serif;
+                    overflow: hidden;
+                    transition: 0.3s ease;
+
+                    @media screen and (max-width: 512px) {
+                        height: 40px;
+                        font-size: 12px;
+                    }
+                }
+
+                .tablinks:before
+
+                /* Gradient */
+                    {
+                    background-image: linear-gradient(135deg, $m01 0%, $m02 100%);
+                    content: "";
+                    width: 100%;
+                    height: 0px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.3s ease-in-out;
+                    z-index: 2;
+                }
+
+
+                /*tab buttons hover*/
+
+                .tablinks:hover::before {
+                    height: 100%;
+                    z-index: 2;
+                    bottom: 0;
+
+                    @media screen and (max-width: 512px) {
+                        height: 0;
+                    }
+                }
+
+
+                /* Tab active */
+
+                .tablinks.active {
+                    background-color: white;
+                    z-index: 0;
+                    border-right: 0px;
+                    border-left: 0px;
+                    height: 110px;
+                    bottom: 0px;
+                    overflow: hidden;
+
+                    @media screen and (max-width: 512px) {
+                        height: 60px;
+                    }
+                }
+
+                .tablinks.active:before
+
+                /* Gradient */
+                    {
+                    content: "";
+                    width: 100%;
+                    height: 5px;
+                    top: 0;
+                    left: 0;
+                }
+
+                /* Tabs text */
+
+                .tablinks.active p,
+                .tablinks.active:hover p {
+                    opacity: 1;
+                    background: -webkit-linear-gradient(135deg, $m01 0%, $m02 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .tablinks p {
+                    opacity: 0.6;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 2;
+                    transition: 0.5s ease;
+                    padding: 0;
+                    margin: 0;
+                    color: $text;
+                    backface-visibility: hidden;
+                    font-weight: 400;
+                }
+
+                .tablinks:hover p {
+                    color: white;
+                    opacity: 1;
+
+                    @media screen and (max-width: 512px) {
+                        color: $text;
+                        opacity: 0.6;
+                    }
+                }
+
+
+                /* Tabs text bigger */
+
+                .tablinks p:before {
+                    content: attr(data-title);
+                    position: absolute;
+                    height: auto;
+                    width: auto;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0.1;
+                    font-size: 40px;
+                    transition: 1s ease-out;
+                    z-index: -1;
+                    font-weight: 600;
+                    top: 110%;
+
+                    @media screen and (max-width: 512px) {
+                        display: none;
+                    }
+                }
+
+                .tablinks:hover p:before {
+                    opacity: 0.1;
+                    font-size: 40px;
+                    top: -80%;
+                }
+
+
+                /* tab content */
+
+                .wrapper_tabcontent {
+                    background-color: white;
+                    margin-top: 0px;
+                    z-index: -3;
+                    position: relative;
+                    opacity: 1;
+                    padding: 40px 60px;
+                    overflow: hidden;
+                    transition: all 1s ease;
+                    top: 0;
+                }
+
+                .tabcontent {
+                    display: none;
+                    min-height: 180px;
+
+                }
+
+                @keyframes tabEffect {
+                    from {
+                        top: -40px;
+                    }
+
+                    to {
+                        top: 0px;
+                    }
+                }
+
+                .tabcontent.active {
+                    transition: all 1s ease;
+                    display: flex;
+                    column-gap: 4em;
+                    align-items: center;
+
+                    img.card-img {
+                        position: static !important;
+                        width: 55%;
+                        border-radius: 1em;
+                        transition: all 1s ease;
+                        animation: fadeEffect 0.6s ease;
+
+                        @media screen and (max-width: 1200px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                /* Tab content line */
+                .wrapper_tabcontent:after {
+                    content: "";
+                    height: 5px;
+                    width: 100%;
+                    position: absolute;
+                    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    left: 0;
+                    bottom: 0;
+                    z-index: -2;
+                    transition: all 1s ease;
+                }
+
+                /* Title */
+                .tabcontent h3 {
+                    font-size: 40px;
+                    top: 75px;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    left: -90px;
+                    opacity: 1;
+                    width: 200px;
+                    height: 60px;
+                    background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding: 0;
+                    animation: city 1s ease;
+
+                    @media screen and (max-width: 512px) {
+                        top: 65px;
+                    }
+                }
+
+                @keyframes city {
+                    from {
+                        left: -150px;
+                    }
+
+                    to {
+                        left: -90px;
+                    }
+                }
+
+                /* Text*/
+                .tabcontent p {
+                    color: $text;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 3em;
+                    font-weight: 100;
+                    transition: all 1s ease;
+                    animation: fadeEffect 0.6s ease;
+                    width: 100%;
+                    font-size: 16px;
+
+                    &.J {
+                        @media screen and (max-width: 660px) {
+                            font-size: 12px;
+                            line-height: 1.5em;
+                        }
+                    }
+
+                    @media screen and (max-width: 660px) {
+                        font-size: 14px;
+                        line-height: 1.5em;
+                    }
+                }
+
+                @keyframes fadeEffect {
+                    from {
+                        opacity: 0;
+                        margin-left: 30px;
+                    }
+
+                    to {
+                        opacity: 1;
+                        margin-left: 0;
+                    }
+                }
+
+                //@at-root
 
                 .container {
                     max-width: 100%;
                     height: 100%;
                     margin: 0 auto;
                     padding: 0 1.5rem;
-                }
-
-                .my-form {
-                    width: 90%;
-
-                    p {
-                        margin-bottom: 0px;
-                        line-height: 2.5vmin;
-                        font-size: 0.95vmax;
-
-                        @media screen and (max-width: 1500px) {
-                            line-height: 2.1vmax;
-                            font-size: 1.5vmax;
-                        }
-
-                        @media screen and (max-width: 600px) {
-                            line-height: 2vmax;
-                            font-size: 2vmax;
-                        }
-                    }
-                }
-
-                ul {
-                    list-style-type: none;
-                }
-
-                .my-form h1 {
-                    margin-bottom: 1.5rem;
-                }
-
-                .my-form li,
-                .my-form .grid>*:not(:last-child) {
-                    margin-bottom: 1.5rem;
-                }
-
-                .my-form input,
-                .my-form button,
-                .my-form textarea {
-                    border-radius: 1em;
-                }
-
-                .my-form select,
-                .my-form input,
-                .my-form textarea,
-                .my-form button {
-                    width: 100%;
-                    line-height: 1.5;
-                    padding: 15px 10px;
-                    border: 1px solid white;
-                    box-shadow: 0 0 20px 0px white;
-                    background: var(--bgFormEls);
-                    color: var(--white);
-                    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
-                        transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-                }
-
-                .my-form textarea {
-                    height: 170px;
-                }
-
-                .my-form ::placeholder {
-                    color: inherit;
-                    /*Fix opacity issue on Firefox*/
-                    opacity: 1;
-                }
-
-                .my-form select:focus,
-                .my-form input:focus,
-                .my-form textarea:focus,
-                .my-form button:enabled:hover,
-                .my-form button:focus {
-                    background: var(--bgFormElsFocus);
-                }
-
-                .my-form select:focus,
-                .my-form input:focus,
-                .my-form textarea:focus {
-                    transform: scale(1.02);
-                }
-
-                .my-form *:required,
-                .my-form select {
-                    background-repeat: no-repeat;
-                    background-position: center right 3%;
-                    background-size: 15px 15px;
-                }
-
-                .my-form *:required {
-                    background: var(--bgFormEls);
-                }
-
-                .my-form *:disabled {
-                    cursor: default;
-                    filter: blur(2px);
-                }
-
-
-                /* FORM BTNS
-                  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-                .my-form .required-msg {
-                    display: none;
-                    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg) no-repeat center left / 15px 15px;
-                    padding-left: 20px;
-                }
-
-                .my-form .btn-grid {
-                    position: relative;
-                    overflow: hidden;
-                    transition: filter 0.2s;
-                }
-
-                .my-form button {
-                    font-weight: bold;
-                }
-
-                .my-form button>* {
-                    transition: transform 0.4s ease-in-out;
-                }
-
-                .my-form button .back {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-110%, -50%);
-                }
-
-                .my-form button:enabled:hover .back,
-                .my-form button:focus .back {
-                    transform: translate(-50%, -50%);
-                }
-
-                .my-form button:enabled:hover .front,
-                .my-form button:focus .front {
-                    transform: translateX(110%);
-                }
-
-
-                /* CUSTOM CHECKBOX
-                  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-                .my-form input[type="checkbox"] {
-                    position: absolute;
-                    left: -9999px;
-                }
-
-                .my-form input[type="checkbox"]+label {
-                    position: relative;
-                    display: inline-block;
-                    padding-left: 2rem;
-                    transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-                }
-
-                .my-form input[type="checkbox"]+label::before,
-                .my-form input[type="checkbox"]+label::after {
-                    content: '';
-                    position: absolute;
-                }
-
-                .my-form input[type="checkbox"]+label::before {
-                    left: 0;
-                    top: -0.1em;
-                    width: 1em;
-                    height: 1em;
-                    border: 2px solid var(--white);
-                }
-
-                .my-form input[type="checkbox"]:checked+label::before {
-                    background: var(--green);
-                }
-
-                .my-form .grid {
-                    display: grid;
-                    grid-gap: 1.5rem;
-                }
-
-                .my-form .grid-2 {
-                    grid-template-columns: 1fr 1fr;
-                }
-
-                .my-form .grid-3 {
-                    grid-template-columns: auto auto auto;
-                    align-items: center;
-                }
-
-                .my-form .grid>*:not(:last-child) {
-                    margin-bottom: 0;
-                }
-
-                .my-form .required-msg {
-                    display: block;
-                }
-
-                @media screen and (min-width: 541px) {
-                    .my-form input[type="checkbox"]+label::before {
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-
-                    .my-form input[type="checkbox"]:checked+label::after {
-                        top: 3px;
-                    }
                 }
 
                 .splide {
@@ -1243,15 +1369,6 @@ body {
 
                 // Timeline
 
-                .rainbow_text_animated {
-                    background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    color: transparent !important;
-                    animation: rainbow_animation 2s ease-in-out infinite;
-                    background-size: 400% 100%;
-                }
-
                 @keyframes rainbow_animation {
 
                     0%,
@@ -1291,14 +1408,6 @@ body {
                             font-weight: 600;
                             color: #9251ac;
                             letter-spacing: 1.5px;
-
-                            span {
-                                position: relative;
-                                top: -0.1vh;
-                                font-size: 1vmax;
-                                text-transform: none;
-                                font-weight: 600;
-                            }
                         }
 
                         &__content {
@@ -1439,7 +1548,7 @@ body {
                         padding-bottom: 3vh;
                     }
 
-                    p{
+                    p {
                         line-height: 4vh;
                     }
 

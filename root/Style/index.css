@@ -1,4 +1,7 @@
-@charset "UTF-8";
+/* main 1*/
+/* main 2*/
+/* neutral 1*/
+/* neutral 2*/
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 :root {
   --white: white;
@@ -440,8 +443,26 @@ body section:nth-of-type(5) {
   background: #243B55;
 }
 body section:nth-of-type(6) {
+  background: #243B55;
+}
+body section:nth-of-type(7) {
   background: -webkit-gradient(linear, left top, left bottom, from(#243B55), to(#141E30));
   background: linear-gradient(#243B55, #141E30);
+}
+body section span.rainbow_text_animated {
+  position: relative;
+  top: -0.1vh;
+  font-size: 1vmax;
+  text-transform: none;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff), color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-animation: rainbow_animation 2s ease-in-out infinite;
+          animation: rainbow_animation 2s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 body section.top::before {
   content: "";
@@ -565,8 +586,6 @@ body section img {
 }
 body section img#mountf {
   z-index: 10;
-  -webkit-animation-name: fmount;
-          animation-name: fmount;
   -webkit-animation-duration: 0.5s, 15s;
           animation-duration: 0.5s, 15s;
   -webkit-animation-timing-function: ease-in-out, ease-in-out;
@@ -647,217 +666,380 @@ body section .content .block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* FORM BTNS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  /* CUSTOM CHECKBOX
-    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /* Tabs menu */
+  /* Tab Links */
+  /*tab buttons hover*/
+  /* Tab active */
+  /* Tabs text */
+  /* Tabs text bigger */
+  /* tab content */
+  /* Tab content line */
+  /* Title */
+  /* Text*/
+}
+body section .content .block #Tabby {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body section .content .block .cox {
+  max-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-width: 260px;
+  margin: auto;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  max-height: 90%;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .cox {
+    margin: 0 4%;
+    margin-top: 5%;
+  }
+}
+body section .content .block .tabs {
+  margin: 0;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  border-radius: 2px 2px 0px 0px;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tabs {
+    height: 40px;
+  }
+}
+body section .content .block .tablinks {
+  background: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, transparent), to(rgba(255, 255, 255, 0.2)));
+  background-image: linear-gradient(90deg, transparent 70%, rgba(255, 255, 255, 0.2) 100%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 33.3333333333%;
+  /*change depending on the number of tabs*/
+  height: 80px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tablinks {
+    height: 40px;
+    font-size: 12px;
+  }
+}
+body section .content .block .tablinks:before {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  content: "";
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+}
+body section .content .block .tablinks:hover::before {
+  height: 100%;
+  z-index: 2;
+  bottom: 0;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tablinks:hover::before {
+    height: 0;
+  }
+}
+body section .content .block .tablinks.active {
+  background-color: white;
+  z-index: 0;
+  border-right: 0px;
+  border-left: 0px;
+  height: 110px;
+  bottom: 0px;
+  overflow: hidden;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tablinks.active {
+    height: 60px;
+  }
+}
+body section .content .block .tablinks.active:before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+}
+body section .content .block .tablinks.active p,
+body section .content .block .tablinks.active:hover p {
+  opacity: 1;
+  background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body section .content .block .tablinks p {
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding: 0;
+  margin: 0;
+  color: #686868;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-weight: 400;
+}
+body section .content .block .tablinks:hover p {
+  color: white;
+  opacity: 1;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tablinks:hover p {
+    color: #686868;
+    opacity: 0.6;
+  }
+}
+body section .content .block .tablinks p:before {
+  content: attr(data-title);
+  position: absolute;
+  height: auto;
+  width: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0.1;
+  font-size: 40px;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+  z-index: -1;
+  font-weight: 600;
+  top: 110%;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tablinks p:before {
+    display: none;
+  }
+}
+body section .content .block .tablinks:hover p:before {
+  opacity: 0.1;
+  font-size: 40px;
+  top: -80%;
+}
+body section .content .block .wrapper_tabcontent {
+  background-color: white;
+  margin-top: 0px;
+  z-index: -3;
+  position: relative;
+  opacity: 1;
+  padding: 40px 60px;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  top: 0;
+}
+body section .content .block .tabcontent {
+  display: none;
+  min-height: 180px;
+}
+@-webkit-keyframes tabEffect {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@keyframes tabEffect {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0px;
+  }
+}
+body section .content .block .tabcontent.active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4em;
+     -moz-column-gap: 4em;
+          column-gap: 4em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body section .content .block .tabcontent.active img.card-img {
+  position: static !important;
+  width: 55%;
+  border-radius: 1em;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: fadeEffect 0.6s ease;
+          animation: fadeEffect 0.6s ease;
+}
+@media screen and (max-width: 1200px) {
+  body section .content .block .tabcontent.active img.card-img {
+    display: none;
+  }
+}
+body section .content .block .wrapper_tabcontent:after {
+  content: "";
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+body section .content .block .tabcontent h3 {
+  font-size: 40px;
+  top: 75px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  left: -90px;
+  opacity: 1;
+  width: 200px;
+  height: 60px;
+  background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+  -webkit-animation: city 1s ease;
+          animation: city 1s ease;
+}
+@media screen and (max-width: 512px) {
+  body section .content .block .tabcontent h3 {
+    top: 65px;
+  }
+}
+@-webkit-keyframes city {
+  from {
+    left: -150px;
+  }
+  to {
+    left: -90px;
+  }
+}
+@keyframes city {
+  from {
+    left: -150px;
+  }
+  to {
+    left: -90px;
+  }
+}
+body section .content .block .tabcontent p {
+  color: #686868;
+  margin: 0;
+  padding: 0;
+  line-height: 3em;
+  font-weight: 100;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-animation: fadeEffect 0.6s ease;
+          animation: fadeEffect 0.6s ease;
+  width: 100%;
+  font-size: 16px;
+}
+@media screen and (max-width: 660px) {
+  body section .content .block .tabcontent p.J {
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+}
+@media screen and (max-width: 660px) {
+  body section .content .block .tabcontent p {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+}
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+    margin-left: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+    margin-left: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 body section .content .block .container {
   max-width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-body section .content .block .my-form {
-  width: 90%;
-}
-body section .content .block .my-form p {
-  margin-bottom: 0px;
-  line-height: 2.5vmin;
-  font-size: 0.95vmax;
-}
-@media screen and (max-width: 1500px) {
-  body section .content .block .my-form p {
-    line-height: 2.1vmax;
-    font-size: 1.5vmax;
-  }
-}
-@media screen and (max-width: 600px) {
-  body section .content .block .my-form p {
-    line-height: 2vmax;
-    font-size: 2vmax;
-  }
-}
-body section .content .block ul {
-  list-style-type: none;
-}
-body section .content .block .my-form h1 {
-  margin-bottom: 1.5rem;
-}
-body section .content .block .my-form li,
-body section .content .block .my-form .grid > *:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-body section .content .block .my-form input,
-body section .content .block .my-form button,
-body section .content .block .my-form textarea {
-  border-radius: 1em;
-}
-body section .content .block .my-form select,
-body section .content .block .my-form input,
-body section .content .block .my-form textarea,
-body section .content .block .my-form button {
-  width: 100%;
-  line-height: 1.5;
-  padding: 15px 10px;
-  border: 1px solid white;
-  -webkit-box-shadow: 0 0 20px 0px white;
-          box-shadow: 0 0 20px 0px white;
-  background: var(--bgFormEls);
-  color: var(--white);
-  -webkit-transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), -webkit-transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), -webkit-transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), -webkit-transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-body section .content .block .my-form textarea {
-  height: 170px;
-}
-body section .content .block .my-form ::-webkit-input-placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-body section .content .block .my-form ::-moz-placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-body section .content .block .my-form :-ms-input-placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-body section .content .block .my-form ::-ms-input-placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-body section .content .block .my-form ::placeholder {
-  color: inherit;
-  /*Fix opacity issue on Firefox*/
-  opacity: 1;
-}
-body section .content .block .my-form select:focus,
-body section .content .block .my-form input:focus,
-body section .content .block .my-form textarea:focus,
-body section .content .block .my-form button:enabled:hover,
-body section .content .block .my-form button:focus {
-  background: var(--bgFormElsFocus);
-}
-body section .content .block .my-form select:focus,
-body section .content .block .my-form input:focus,
-body section .content .block .my-form textarea:focus {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-body section .content .block .my-form *:required,
-body section .content .block .my-form select {
-  background-repeat: no-repeat;
-  background-position: center right 3%;
-  background-size: 15px 15px;
-}
-body section .content .block .my-form *:required {
-  background: var(--bgFormEls);
-}
-body section .content .block .my-form *:disabled {
-  cursor: default;
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-}
-body section .content .block .my-form .required-msg {
-  display: none;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg) no-repeat center left/15px 15px;
-  padding-left: 20px;
-}
-body section .content .block .my-form .btn-grid {
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: -webkit-filter 0.2s;
-  transition: -webkit-filter 0.2s;
-  transition: filter 0.2s;
-  transition: filter 0.2s, -webkit-filter 0.2s;
-}
-body section .content .block .my-form button {
-  font-weight: bold;
-}
-body section .content .block .my-form button > * {
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
-}
-body section .content .block .my-form button .back {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-110%, -50%);
-          transform: translate(-110%, -50%);
-}
-body section .content .block .my-form button:enabled:hover .back,
-body section .content .block .my-form button:focus .back {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-body section .content .block .my-form button:enabled:hover .front,
-body section .content .block .my-form button:focus .front {
-  -webkit-transform: translateX(110%);
-          transform: translateX(110%);
-}
-body section .content .block .my-form input[type=checkbox] {
-  position: absolute;
-  left: -9999px;
-}
-body section .content .block .my-form input[type=checkbox] + label {
-  position: relative;
-  display: inline-block;
-  padding-left: 2rem;
-  -webkit-transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-  transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-body section .content .block .my-form input[type=checkbox] + label::before,
-body section .content .block .my-form input[type=checkbox] + label::after {
-  content: "";
-  position: absolute;
-}
-body section .content .block .my-form input[type=checkbox] + label::before {
-  left: 0;
-  top: -0.1em;
-  width: 1em;
-  height: 1em;
-  border: 2px solid var(--white);
-}
-body section .content .block .my-form input[type=checkbox]:checked + label::before {
-  background: var(--green);
-}
-body section .content .block .my-form .grid {
-  display: grid;
-  grid-gap: 1.5rem;
-}
-body section .content .block .my-form .grid-2 {
-  grid-template-columns: 1fr 1fr;
-}
-body section .content .block .my-form .grid-3 {
-  grid-template-columns: auto auto auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-body section .content .block .my-form .grid > *:not(:last-child) {
-  margin-bottom: 0;
-}
-body section .content .block .my-form .required-msg {
-  display: block;
-}
-@media screen and (min-width: 541px) {
-  body section .content .block .my-form input[type=checkbox] + label::before {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  body section .content .block .my-form input[type=checkbox]:checked + label::after {
-    top: 3px;
-  }
 }
 body section .content .block .splide {
   width: 75%;
@@ -1268,16 +1450,6 @@ body section .content .block .splide__pagination--ttb {
   right: 0.5em;
   top: 0;
 }
-body section .content .block .rainbow_text_animated {
-  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff), color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
-  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent !important;
-  -webkit-animation: rainbow_animation 2s ease-in-out infinite;
-          animation: rainbow_animation 2s ease-in-out infinite;
-  background-size: 400% 100%;
-}
 @-webkit-keyframes rainbow_animation {
   0%, 100% {
     background-position: 0 0;
@@ -1329,13 +1501,6 @@ body section .content .block .timeline__event__title {
   font-weight: 600;
   color: #9251ac;
   letter-spacing: 1.5px;
-}
-body section .content .block .timeline__event__title span {
-  position: relative;
-  top: -0.1vh;
-  font-size: 1vmax;
-  text-transform: none;
-  font-weight: 600;
 }
 body section .content .block .timeline__event__content {
   padding: 3vh;
