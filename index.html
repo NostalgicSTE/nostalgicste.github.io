@@ -25,6 +25,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://unpkg.com/zooming/build/zooming.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="./root/manifest.json" />
     <meta name="theme-color" content="#bada55" />
@@ -97,6 +103,16 @@
             <li class="Execution+">
                 <a href="#Execution+" class="items"><span class="material-symbols-rounded">
                         exposure_plus_2
+                    </span></a>
+            </li>
+            <li class="Cessation">
+                <a href="#Cessation" class="items"><span class="material-symbols-rounded">
+                        mood
+                    </span></a>
+            </li>
+            <li class="Conclusion">
+                <a href="#Conclusion" class="items"><span class="material-symbols-rounded">
+                        diversity_1
                     </span></a>
             </li>
         </ul>
@@ -222,8 +238,26 @@
                                     Execution<span class="rainbow_text_animated">ultra</span>
                                 </div>
                                 <div class="timeline__event__description">
-                                    <p>Server maintainance at AMK branch. Completion of a portion of Jira service
-                                        desk application. Automation of Active directory user retriving application.</p>
+                                    <p>Server maintenance at AMK branch. Completion of a portion of Jira service desk
+                                        application. Automation of Active directory user retrieving application.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+                            <div class="timeline__event__icon">
+                                <i class="lni-burger"></i>
+                                <div class="timeline__event__date">
+                                    21 Jun - 25 Jul
+                                </div>
+                            </div>
+                            <div class="timeline__event__content">
+                                <div class="timeline__event__title">
+                                    Cessation
+                                </div>
+                                <div class="timeline__event__description">
+                                    <p>Atlassian familiarization, AD user addition and documentation, following which
+                                        was Bitbucket projects migration; studied networking (compTIA Network+), for
+                                        future use.</p>
                                 </div>
                             </div>
                         </div>
@@ -246,11 +280,11 @@
                                 <li class="splide__slide">
                                     <h1>Familiarization</h1>
                                     <div>
-                                        <p style="text-align: justify;">From a controlled enviroment like a classroom,
+                                        <p style="text-align: justify;">From a controlled environment like a classroom,
                                             to a more unstructured and easy-going workplace, I was expecting to have
                                             some cultural shocks. However, to be frank, I felt the same warmth and sense
                                             of belonging since the first day at work. It helped me to better adapt to
-                                            the new enviroment quickly.</p>
+                                            the new environment quickly.</p>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -460,6 +494,10 @@
                                 had to purge the created script and redo a new one without using excel application. The
                                 process of creating this script was honestly tiring and demotivating. But soon enough,
                                 we managed to crack the code and were able to create a workable script.</p>
+                            <img src="/Multimedia/F.webp" class="card-img img-zoomable"><br>
+                            <img src="/Multimedia/S.webp" class="card-img img-zoomable"><br>
+                            <img src="/Multimedia/T.webp" class="card-img img-zoomable"><br>
+                            <img src="/Multimedia/4.webp" class="card-img img-zoomable">
                         </div>
 
                         <div class="card" style="padding: 0px; margin: 0px;"></div>
@@ -472,6 +510,70 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="Cessation">
+        <div id="particles-js6">
+            <div class="content">
+                <h2 style="color: #535fbe;">Cessation</h2>
+                <div class="block" style="overflow: auto; pointer-events: auto; display: block;">
+                    Xd
+                    Xd
+                    Xd
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Conclusion">
+        <div id="particles-js7">
+            <div class="content">
+                <h2 class="rainbw">Conclusion</h2>
+                <div class="block" style="overflow: auto; pointer-events: auto; display: flex;">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <h2>
+                                    What I learnt from this internship
+                                </h2>
+                                <br><br>
+                                <p>
+                                    dsdsds
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2>
+                                    What I liked most about the internship
+                                </h2>
+                                <br><br>
+                                <p>
+                                    dsdsds
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2>
+                                    What I dislike about the internship
+                                </h2>
+                                <br><br>
+                                <p>
+                                    dsdsds
+                                </p>
+                            </div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+
+                </div>
+            </div>
     </section>
 
     <!-- Scripts -->
@@ -526,6 +628,10 @@
     <script async src="./root/Particles/app4.js"></script>
     <script src="./root/Particles/particles5.js"></script>
     <script async src="./root/Particles/app5.js"></script>
+    <script src="./root/Particles/particles6.js"></script>
+    <script async src="./root/Particles/app6.js"></script>
+    <script src="./root/Particles/particles7.js"></script>
+    <script async src="./root/Particles/app7.js"></script>
     <script src="https://kit.fontawesome.com/905e574296.js" crossorigin="anonymous"></script>
     <script src="./root/JS/Splash.js"></script>
     <script src="./root/JS/Parallex.js"></script>
@@ -536,6 +642,7 @@
     <script src="./root/JS/Checkbox.js"></script>
     <script src="./root/JS/clock.js"></script>
     <script src="/root/JS/Tabs.js"></script>
+    <script src="/root/JS/swiper.js"></script>
 </body>
 
 </html><!--  -->

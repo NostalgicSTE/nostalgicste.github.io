@@ -116,6 +116,16 @@
   height: 100vh;
 }
 
+#particles-js6 {
+  width: 100%;
+  height: 100vh;
+}
+
+#particles-js7 {
+  width: 100%;
+  height: 100vh;
+}
+
 body {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#1c0522), to(#243B55));
@@ -352,6 +362,7 @@ body .term {
   font-size: 1.5vmax;
   text-transform: lowercase;
   letter-spacing: 0.01em;
+  font-family: "Ubuntu Mono", monospace;
 }
 body .term:after {
   content: "_";
@@ -378,6 +389,7 @@ body header {
 }
 body header a > pre::before {
   content: "intern@dfs:~$ ";
+  font-family: "Ubuntu Mono", monospace !important;
 }
 body header ul {
   display: -webkit-box;
@@ -446,8 +458,24 @@ body section:nth-of-type(6) {
   background: #243B55;
 }
 body section:nth-of-type(7) {
+  background: #243B55;
+}
+body section:nth-of-type(8) {
+  background: #243B55;
+}
+body section:nth-of-type(9) {
   background: -webkit-gradient(linear, left top, left bottom, from(#243B55), to(#141E30));
   background: linear-gradient(#243B55, #141E30);
+}
+body section .rainbw {
+  background: -webkit-gradient(linear, left top, right top, from(#6666ff), color-stop(#0099ff), color-stop(#00ff00), color-stop(#ff3399), to(#6666ff));
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-animation: rainbow_animation 2s ease-in-out infinite;
+          animation: rainbow_animation 2s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 body section span.rainbow_text_animated {
   position: relative;
@@ -675,6 +703,41 @@ body section .content .block {
   /* Tab content line */
   /* Title */
   /* Text*/
+}
+body section .content .block .swiper {
+  width: 80%;
+  height: 80%;
+}
+body section .content .block .swiper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body section .content .block .swiper .swiper-slide:nth-child(1n) {
+  background-image: linear-gradient(135deg, #283048, #8593c8);
+}
+body section .content .block .swiper .swiper-slide:nth-child(2n) {
+  background-image: linear-gradient(135deg, #4776E6, #8E54E9);
+}
+body section .content .block .swiper .swiper-slide:nth-child(3n) {
+  background-image: linear-gradient(135deg, #16222A, #3A6073);
+}
+body section .content .block.rainbw {
+  border-color: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  color: transparent !important;
+  -webkit-animation: rainbow_animation 2s ease-in-out infinite;
+          animation: rainbow_animation 2s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 body section .content .block #Tabby {
   display: -webkit-box;
