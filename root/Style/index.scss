@@ -44,7 +44,7 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Comfortaa', sans-serif;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     scroll-snap-type: y proximity;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -640,8 +640,27 @@ body {
                 align-items: center;
 
                 .swiper {
-                    width: 80%;
+                    width: 85%;
+                    top: 10%;
                     height: 80%;
+
+                    .swiper {
+                        width: 85%;
+                        top: 0%;
+                        height: 80%;
+
+                        .swiper-slide:nth-child(3n+1) {
+                            background: #243B55;
+                        }
+
+                        .swiper-slide:nth-child(3n+2) {
+                            background: #243B55;
+                        }
+
+                        .swiper-slide:nth-child(3n+3) {
+                            background: #555ac0;
+                        }
+                    }
 
                     .swiper-slide {
                         display: flex;
@@ -650,16 +669,16 @@ body {
                         justify-content: center;
                     }
 
-                    .swiper-slide:nth-child(1n) {
-                        background-image: linear-gradient(135deg, #283048, #8593c8);
+                    .swiper-slide:nth-child(3n+1) {
+                        background: #243B55;
                     }
 
-                    .swiper-slide:nth-child(2n) {
-                        background-image: linear-gradient(135deg, #4776E6, #8E54E9);
+                    .swiper-slide:nth-child(3n+2) {
+                        background: #243B55;
                     }
 
-                    .swiper-slide:nth-child(3n) {
-                        background-image: linear-gradient(135deg, #16222A, #3A6073);
+                    .swiper-slide:nth-child(3n+3) {
+                        background: #555ac0;
                     }
                 }
 
@@ -1849,28 +1868,6 @@ body {
             filter: blur(5px) brightness(2);
         }
     }
-
-    // @keyframes moon {
-    //     0% {
-    //         filter: brightness(2.5);
-    //     }
-
-    //     25% {
-    //         filter: brightness(0.5);
-    //     }
-
-    //     50% {
-    //         filter: brightness(2.5);
-    //     }
-
-    //     75% {
-    //         filter: brightness(0.5);
-    //     }
-
-    //     100% {
-    //         filter: brightness(2.5);
-    //     }
-    // }
 
     @keyframes stars {
         0% {

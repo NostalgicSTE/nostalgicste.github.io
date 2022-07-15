@@ -1,7 +1,7 @@
 {
-  "name": "Portfolio Website",
-  "short_name": "Portfolio",
-  "description": "Offline portfolio application",
+  "name": "Presentation Website",
+  "short_name": "Presentation",
+  "description": "Offline Presentation application",
   "theme_color": "#243B55",
   "background_color": "#141E30",
   "start_url": "../index.html#homesrc",

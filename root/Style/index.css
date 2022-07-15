@@ -705,8 +705,23 @@ body section .content .block {
   /* Text*/
 }
 body section .content .block .swiper {
-  width: 80%;
+  width: 85%;
+  top: 10%;
   height: 80%;
+}
+body section .content .block .swiper .swiper {
+  width: 85%;
+  top: 0%;
+  height: 80%;
+}
+body section .content .block .swiper .swiper .swiper-slide:nth-child(3n+1) {
+  background: #243B55;
+}
+body section .content .block .swiper .swiper .swiper-slide:nth-child(3n+2) {
+  background: #243B55;
+}
+body section .content .block .swiper .swiper .swiper-slide:nth-child(3n+3) {
+  background: #555ac0;
 }
 body section .content .block .swiper .swiper-slide {
   display: -webkit-box;
@@ -723,14 +738,14 @@ body section .content .block .swiper .swiper-slide {
       -ms-flex-pack: center;
           justify-content: center;
 }
-body section .content .block .swiper .swiper-slide:nth-child(1n) {
-  background-image: linear-gradient(135deg, #283048, #8593c8);
+body section .content .block .swiper .swiper-slide:nth-child(3n+1) {
+  background: #243B55;
 }
-body section .content .block .swiper .swiper-slide:nth-child(2n) {
-  background-image: linear-gradient(135deg, #4776E6, #8E54E9);
+body section .content .block .swiper .swiper-slide:nth-child(3n+2) {
+  background: #243B55;
 }
-body section .content .block .swiper .swiper-slide:nth-child(3n) {
-  background-image: linear-gradient(135deg, #16222A, #3A6073);
+body section .content .block .swiper .swiper-slide:nth-child(3n+3) {
+  background: #555ac0;
 }
 body section .content .block.rainbw {
   border-color: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
