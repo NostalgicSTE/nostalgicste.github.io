@@ -41,7 +41,7 @@ var swiper3 = new Swiper(".mySwiper3", {
   // effect: "fade",
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   effect: "creative",
   creativeEffect: {

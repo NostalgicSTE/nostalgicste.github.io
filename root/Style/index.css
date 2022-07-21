@@ -133,6 +133,9 @@ body {
   overflow-x: hidden;
   display: none;
 }
+body p {
+  text-align: justify;
+}
 body .fire {
   position: absolute;
   background-color: #141E30;
@@ -734,12 +737,28 @@ body section .content .block .swiper .swiper-slide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 1em;
+}
+body section .content .block .swiper .swiper-slide p {
+  width: 80%;
+}
+body section .content .block .swiper .swiper-slide img.card-img {
+  position: static !important;
+  width: 90%;
+  height: auto;
+  border-radius: 1em;
+  margin: auto;
+}
+@media screen and (max-width: 500px) {
+  body section .content .block .swiper .swiper-slide img.card-img {
+    width: 80%;
+  }
 }
 body section .content .block .swiper .swiper-slide:nth-child(3n+1) {
-  background: #243B55;
+  background: #1672db;
 }
 body section .content .block .swiper .swiper-slide:nth-child(3n+2) {
   background: #243B55;
