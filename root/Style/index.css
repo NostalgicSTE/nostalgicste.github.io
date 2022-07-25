@@ -745,7 +745,7 @@ body section .content .block .swiper .swiper-slide {
           justify-content: space-evenly;
   border-radius: 1em;
 }
-body section .content .block .swiper .swiper-slide p {
+body section .content .block .swiper .swiper-slide p, body section .content .block .swiper .swiper-slide h2 {
   width: 80%;
 }
 body section .content .block .swiper .swiper-slide img.card-img {
