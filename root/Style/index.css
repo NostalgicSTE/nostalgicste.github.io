@@ -136,6 +136,9 @@ body {
 body p {
   text-align: justify;
 }
+body img {
+  max-width: inherit !important;
+}
 body .fire {
   position: absolute;
   background-color: #141E30;
