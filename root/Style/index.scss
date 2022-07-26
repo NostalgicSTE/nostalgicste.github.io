@@ -45,7 +45,7 @@ $optionDefaultColours: #ED5565, #FC6E51, #FFCE54, #2ECC71, #5D9CEC, #AC92EC;
     box-sizing: border-box;
     font-family: 'Comfortaa', sans-serif;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    // scroll-snap-type: y proximity;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -385,7 +385,7 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        scroll-snap-align: start;
+        // scroll-snap-align: start;
 
         &:nth-of-type(1) {
             background: $darkbgl;
