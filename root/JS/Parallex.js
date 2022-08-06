@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
   moon.style.top = -i * 1.05 + "px";
   mountb.style.top = i * 0.5 + "px";
   mountf.style.top = i * 0.0 + "px";
-  txt.style.marginRight = i * 3 + "px";
+  txt.style.marginRight = i * 5 + "px";
   txt.style.marginTop = i * 1.15 + "px";
   header.style.top = i * 0.5 + "px";
 });
