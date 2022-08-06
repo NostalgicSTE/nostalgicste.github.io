@@ -124,6 +124,11 @@
   height: 100vh;
 }
 
+#particles-js8 {
+  width: 100%;
+  height: 100vh;
+}
+
 body {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#1c0522), to(#243B55));
@@ -666,11 +671,16 @@ body section img#moon {
 }
 body section #intro {
   position: absolute;
-  right: -420px;
+  right: -1020px;
   color: white;
   white-space: nowrap;
   font-size: 10.5vw;
   z-index: 9;
+}
+@media screen and (max-width: 475px) {
+  body section #intro {
+    right: -400px;
+  }
 }
 body section .content {
   width: 100%;
@@ -1874,6 +1884,9 @@ body section .content .block .row .column .tt {
   border-radius: 1em;
   margin: auto;
   padding: 1.1em;
+}
+body section .content .block .row .column .tt .company {
+  line-height: 3em;
 }
 body section .content .block .row .column .tt .candid {
   position: inherit;
