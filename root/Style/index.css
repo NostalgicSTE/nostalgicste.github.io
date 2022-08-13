@@ -927,7 +927,7 @@ body section .content .block .tablinks {
   }
 }
 body section .content .block .tablinks:before {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: rgba(83, 35, 166, 0.2980392157);
   content: "";
   width: 100%;
   height: 0px;
@@ -972,7 +972,7 @@ body section .content .block .tablinks.active:before {
 body section .content .block .tablinks.active p,
 body section .content .block .tablinks.active:hover p {
   opacity: 1;
-  background: -webkit-linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -992,20 +992,10 @@ body section .content .block .tablinks p {
   transition: 0.5s ease;
   padding: 0;
   margin: 0;
-  color: #686868;
+  color: #000;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   font-weight: 400;
-}
-body section .content .block .tablinks:hover p {
-  color: white;
-  opacity: 1;
-}
-@media screen and (max-width: 512px) {
-  body section .content .block .tablinks:hover p {
-    color: #686868;
-    opacity: 0.6;
-  }
 }
 body section .content .block .tablinks p:before {
   content: attr(data-title);
@@ -1041,7 +1031,7 @@ body section .content .block .tablinks:hover p:before {
   top: -80%;
 }
 body section .content .block .wrapper_tabcontent {
-  background-color: rgb(255, 255, 255);
+  background-color: #360092;
   margin-top: 0px;
   position: relative;
   opacity: 1;
@@ -1149,7 +1139,7 @@ body section .content .block .tabcontent h3 {
   }
 }
 body section .content .block .tabcontent p {
-  color: #686868;
+  color: #fff;
   margin: 0;
   padding: 0;
   line-height: 3em;
